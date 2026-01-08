@@ -46,3 +46,65 @@ cloud-101-aws-workshop/
 │   └── lambda-setup.md
 │
 └── README.md
+
+
+## How to run this yourself
+
+### Prerequisites
+
+Before you begin, make sure you have:
+
+- An active AWS account
+- Basic knowledge of Python
+- Basic knowledge of JavaScript
+
+---
+
+### Step 1: Deploy Lambda functions
+
+Create and deploy the backend Lambda functions using Python.  
+These functions handle the quote generation and sentiment analysis logic.
+
+👉 Follow the detailed steps here:  
+[`lambda-setup.md`](setup/lambda-setup.md)
+
+---
+
+### Step 2: Configure API Gateway
+
+Set up Amazon API Gateway to expose your Lambda functions as HTTP APIs.  
+Each route will be connected to a different Lambda function.
+
+👉 Follow the detailed steps here:  
+[`api-gateway.md`](setup/api-gateway.md)
+
+---
+
+### Step 3: Host frontend on S3
+
+Upload the frontend files to an Amazon S3 bucket and enable static website hosting.  
+The frontend will call the API Gateway endpoints.
+
+👉 Follow the detailed steps here:  
+[`s3-setup.md`](setup/s3-setup.md)
+
+---
+
+## Learning outcomes
+
+By completing this project, you will learn:
+
+- What serverless means in practice
+- How frontend and backend communicate in the cloud
+- How APIs work in real applications
+- How AI services can be integrated into cloud-based apps
+
+---
+
+## Cleanup
+
+⚠️ **Important**
+
+After testing, remember to delete the AWS resources you created  
+(Lambda functions, API Gateway, and S3 bucket) to avoid unexpected charges.
+
