@@ -14,14 +14,14 @@ A simple web app where:
 Architecture:
 Browser -> S3 -> API Gateway -> Lambda -> AWS AI Service
 
-![Architecture](architecture/architecture.png)
+![Architecture](architecture/ServerlessAPI.png)
 
 ## Tech stack
 
 - Amazon S3 (Static Website Hosting)
 - Amazon API Gateway
 - AWS Lambda (Python)
-- AWS AI Service
+- AWS AI Service (Amazon Comprehend)
 - HTML, CSS, JavaScript
 
 ## Folder structure
@@ -33,9 +33,9 @@ cloud-101-aws-workshop/
 │
 ├── lambda/
 │   ├── quote_function/
-│   │   └── lambda_function.py
+│   │   └── quote_lambda_function.py
 │   └── sentiment_function/
-│       └── lambda_function.py
+│       └── sentiment_lambda_function.py
 │
 ├── architecture/
 │   └── architecture.png
@@ -46,6 +46,8 @@ cloud-101-aws-workshop/
 │   └── lambda-setup.md
 │
 └── README.md
+│
+└── example-s3-policy
 
 
 ## How to run this yourself
@@ -55,8 +57,8 @@ cloud-101-aws-workshop/
 Before you begin, make sure you have:
 
 - An active AWS account
-- Basic knowledge of Python
-- Basic knowledge of JavaScript
+- Basic knowledge of Python/JSON/YAML
+- Basic knowledge of HTML/CSS/JavaScript
 
 ---
 
