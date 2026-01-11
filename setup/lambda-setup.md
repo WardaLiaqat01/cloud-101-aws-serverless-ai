@@ -37,10 +37,11 @@ We will create **two Lambda functions**:
 4. Architecture: **x86_64**
 5. Attach existing lambda function with basic execution policy and "comprehend full access" policy
 6. Click **Create function**
-
+7. Repeat the same steps for sentiment lambda function as well
 ---
 
-## Step 3: Add Quote Function Code
+## Step 3: Add Quote/Sentiment Functions Code
 
 Replace the default code with the respective lambda codes.
+
 
