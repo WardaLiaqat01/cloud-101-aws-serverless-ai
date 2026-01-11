@@ -10,4 +10,5 @@
   ]
 }
 
-// Warning: this is quite open policy that is not recommended in production/dev, please limit it as much as possible as per your use case}
+
+// Warning: this is quite open policy which is not recommended in production/dev, please limit it as much as possible as per your use case}
