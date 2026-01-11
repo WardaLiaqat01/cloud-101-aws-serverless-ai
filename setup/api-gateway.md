@@ -12,7 +12,7 @@ The frontend (browser) talks to API Gateway, and API Gateway forwards requests t
 We will create one HTTP API with two routes:
 
 - `GET /quote` → returns a random quote
-- `POST /sentiment` → analyzes text sentiment using an AI service
+- `GET /sentiment` → analyzes text sentiment using an AI service
 
 Each route will be connected to a **different Lambda function**.
 
@@ -100,4 +100,5 @@ You will use this URL in the frontend.
 ## Step 7: Test the API
 
 Open your browser and visit:[API Invoke URL/[route]]
+
 
