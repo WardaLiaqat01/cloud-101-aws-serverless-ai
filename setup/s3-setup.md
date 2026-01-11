@@ -53,6 +53,7 @@ You can upload by:
 - Clicking **Upload**
 
 ---
+**Don't forget to add the bucket policy for the S3 bucket**
 
 ## Step 4: Connect Frontend to API Gateway
 
@@ -61,5 +62,4 @@ Don't forget to replace your API URL in the index.html js section
 ```js
 const API_BASE_URL = "https://your-api-id.execute-api.region.amazonaws.com";
 
----
-**Don't forget to add the bucket policy for the S3 bucket
+
