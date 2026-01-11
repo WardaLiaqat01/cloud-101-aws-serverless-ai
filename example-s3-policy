@@ -1,0 +1,13 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "bucket-arn/*"
+    }
+  ]
+}
+
+// Warning: this is quite open policy that is not recommended in production/dev, please limit it as much as possible as per your use case}

@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CS101 Cloud Workshop</title>
+  <style>
+    body {
+      font-family: system-ui;
+      background: #0f172a;
+      color: #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem;
+    }
+    button {
+      padding: 0.6rem 1.2rem;
+      margin: 0.5rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #38bdf8;
+      font-weight: 600;
+    }
+    input {
+      padding: 0.5rem;
+      width: 320px;
+      border-radius: 8px;
+      border: none;
+      margin-right: 0.5rem;
+    }
+    pre {
+      background: #020617;
+      padding: 1rem;
+      border-radius: 12px;
+      width: 420px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>☁️ Cloud 101 — Live AWS Demo</h1>
+
+<section>
+  <h3>Random Quote API</h3>
+  <button id="quoteBtn">Get Quote</button>
+  <pre id="quoteOut">Click the button</pre>
+</section>
+
+<section>
+  <h3>Sentiment Analyzer</h3>
+  <input id="textInput" placeholder="Type something..." />
+  <button id="sentimentBtn">Analyze</button>
+  <pre id="sentimentOut">Waiting for input</pre>
+</section>
+
+<script>
+  // REPLACE THIS WITH YOUR REAL API URL
+  const API_BASE_URL = "https://wrhsmcrski.execute-api.us-east-1.amazonaws.com";
+
+  document.getElementById("quoteBtn").onclick = async () => {
+    const res = await fetch(`${API_BASE_URL}/quotes`);
+    const data = await res.json();
+    document.getElementById("quoteOut").textContent =
+      JSON.stringify(data, null, 2);
+  };
+
+  document.getElementById("sentimentBtn").onclick = async () => {
+    const text = document.getElementById("textInput").value || "I love AWS";
+    const encoded = encodeURIComponent(text);
+    const res = await fetch(`${API_BASE_URL}/sentiment?text=${encoded}`);
+    const data = await res.json();
+    document.getElementById("sentimentOut").textContent =
+      JSON.stringify(data, null, 2);
+  };
+</script>
+
+</body>
+</html>
