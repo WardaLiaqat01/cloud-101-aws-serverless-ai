@@ -58,10 +58,10 @@
 
 <script>
   // REPLACE THIS WITH YOUR REAL API URL
-  const API_BASE_URL = "https://wrhsmcrski.execute-api.us-east-1.amazonaws.com";
+  const API_BASE_URL = "API_BASE_URL";
 
   document.getElementById("quoteBtn").onclick = async () => {
-    const res = await fetch(`${API_BASE_URL}/quotes`);
+    const res = await fetch(`${API_BASE_URL}/quote`);
     const data = await res.json();
     document.getElementById("quoteOut").textContent =
       JSON.stringify(data, null, 2);
@@ -78,4 +78,5 @@
 </script>
 
 </body>
+
 </html>
