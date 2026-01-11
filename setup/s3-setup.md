@@ -1,6 +1,6 @@
 # S3 Frontend Setup (Static Website Hosting)
 
-In this step, we will host our frontend (HTML, CSS, and JavaScript) using **Amazon S3**.
+In this step, we will host our frontend (Single HTML file for now) using **Amazon S3**.
 
 Amazon S3 is an object storage service, but it can also be used to host **static websites** without any servers.
 
@@ -60,3 +60,6 @@ Don't forget to replace your API URL in the index.html js section
 
 ```js
 const API_BASE_URL = "https://your-api-id.execute-api.region.amazonaws.com";
+
+---
+**Don't forget to add the bucket policy for the S3 bucket
